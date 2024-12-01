@@ -1,0 +1,18 @@
+:root {
+    /* Primary */
+    --tomato: hsl(4, 100%, 67%);
+
+    /* Neutral */
+    --dark-slate-grey: hsl(234, 29%, 20%);
+    --charcoal-grey: hsl(235, 18%, 26%);
+    --grey: hsl(231, 7%, 60%);
+    --white: hsl(0, 0%, 100%);
+
+    /* Typography */
+    --font-size-body: 16px;
+
+    /* Font */
+    --font-family: 'Roboto', sans-serif;
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+}
