@@ -27,23 +27,58 @@
           src="assets/images/illustration-sign-up-mobile.svg"
           alt="Website illustration "
         />
-        <div class="text-container">
+        <img
+          src="assets/images/illustration-sign-up-desktop.svg"
+          alt="Website illustration big"
+        />
+        <div class="-container">
           <!-- Sign-up form start -->
-          <h1>Stay updated!</h1>
+          <h1 class="">Stay updated!</h1>
           <p>Join 60,000+ product managers receiving monthly updates on:</p>
           <ul>
-            <li>Product discovery and building what matters</li>
-            <li>Measuring to ensure updates are a success</li>
-            <li>And much more!</li>
+            <li>
+              <img
+                class="icon-list"
+                src="assets/images/icon-list.svg"
+                alt="tick mark"
+              />Product discovery and building what matters
+            </li>
+            <li>
+              <img
+                class="icon-list"
+                src="assets/images/icon-list.svg"
+                alt="tick mark"
+              />Measuring to ensure updates are a success
+            </li>
+
+            <li>
+              <img
+                class="icon-list"
+                src="assets/images/icon-list.svg"
+                alt="tick mark"
+              />And much more!
+            </li>
           </ul>
-          <div class="ribbon">Email address</div>
-          <form action="">email@company.com</form>
+          <div class="ribbon">
+            <span>Email address</span
+            ><span id="error-state">Valid email required</span>
+          </div>
+          <form action="action_page.php">
+            <input type="email" />email@company.com
+          </form>
           <button>Subscribe to monthly newsletter</button>
           <!-- Sign-up form end -->
           <!-- Success message start -->
-          Thanks for subscribing! A confirmation email has been sent to
-          ash@loremcompany.com. Please open it and click the button inside to
-          confirm your subscription. Dismiss message
+          <div id="sucess-container" class="success-container">
+            <img src="assets/images/icon-success.svg" alt="tick-mark-big" />
+            <h1 class="success-title">Thanks for subscribing!</h1>
+            <p class="succes-text">
+              A confirmation email has been sent toash@loremcompany.com
+              <span id="email-adress">ash@loremcompany.com</span>. Please open
+              it and click the button inside to confirm your subscription.
+              <button class="dismiss-button">Dismiss message</button>
+            </p>
+          </div>
           <!-- Success message end -->
         </div>
       </div>
