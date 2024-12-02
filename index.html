@@ -3,85 +3,91 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/images/favicon-32x32.png"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+    <title>Newsletter Sign-Up Form</title>
+    <link rel="icon" href="./assets/images/favicon-32x32.png" sizes="32x32" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="style.css" />
     <script defer src="main.js"></script>
-    <title>
-      Frontend Mentor | Newsletter sign-up form with success message
-    </title>
   </head>
-  <main>
-    <body>
-      <div class="main-container">
-        <img
-          src="assets/images/illustration-sign-up-mobile.svg"
-          alt="Website illustration "
-        />
-        <img
-          src="assets/images/illustration-sign-up-desktop.svg"
-          alt="Website illustration big"
-        />
-        <div class="-container">
-          <!-- Sign-up form start -->
-          <h1 class="">Stay updated!</h1>
-          <p>Join 60,000+ product managers receiving monthly updates on:</p>
-          <ul>
-            <li>
-              <img
-                class="icon-list"
-                src="assets/images/icon-list.svg"
-                alt="tick mark"
-              />Product discovery and building what matters
-            </li>
-            <li>
-              <img
-                class="icon-list"
-                src="assets/images/icon-list.svg"
-                alt="tick mark"
-              />Measuring to ensure updates are a success
-            </li>
-
-            <li>
-              <img
-                class="icon-list"
-                src="assets/images/icon-list.svg"
-                alt="tick mark"
-              />And much more!
-            </li>
-          </ul>
-          <div class="ribbon">
-            <span>Email address</span
-            ><span id="error-state">Valid email required</span>
-          </div>
-          <form action="action_page.php">
-            <input type="email" />email@company.com
-          </form>
-          <button>Subscribe to monthly newsletter</button>
-          <!-- Sign-up form end -->
-          <!-- Success message start -->
-          <div id="sucess-container" class="success-container">
-            <img src="assets/images/icon-success.svg" alt="tick-mark-big" />
-            <h1 class="success-title">Thanks for subscribing!</h1>
-            <p class="succes-text">
-              A confirmation email has been sent toash@loremcompany.com
-              <span id="email-adress">ash@loremcompany.com</span>. Please open
-              it and click the button inside to confirm your subscription.
-              <button class="dismiss-button">Dismiss message</button>
+  <body>
+    <main>
+      <div id="main" class="main__container">
+        <picture
+          ><source
+            class="illustration____mobile"
+            srcset="assets/images/illustration-sign-up-mobile.svg"
+            media="(max-width:56em)"
+            alt="Newsletter sign-up illustration for mobile devices" />
+          <img
+            src="assets/images/illustration-sign-up-desktop.svg"
+            alt="Newsletter sign-up illustration for desktop devices"
+        /></picture>
+        <div class="left__container">
+          <div class="text__container">
+            <h1 class="form__title">Stay updated!</h1>
+            <p class="form__paragraph">
+              Join 60,000+ product managers receiving monthly updates on:
             </p>
+            <div class="form__list">
+              <div class="form__bullet">
+                <img
+                  class="form__icon"
+                  src="assets/images/icon-list.svg"
+                  alt="Checkmark"
+                />
+                Product discovery and building what matters
+              </div>
+              <div class="form__bullet">
+                <img
+                  class="form__icon"
+                  src="assets/images/icon-list.svg"
+                  alt="Checkmark"
+                />
+                Measuring to ensure updates are a success
+              </div>
+              <div class="form__bullet">
+                <img
+                  class="form__icon"
+                  src="assets/images/icon-list.svg"
+                  alt="Checkmark"
+                />
+                And much more!
+              </div>
+            </div>
           </div>
-          <!-- Success message end -->
+          <div class="form__container">
+            <div class="form__label">
+              <p class="label">Email adress</p>
+              <p id="error" class="error__message">Valid email required</p>
+            </div>
+            <form action="#">
+              <input
+                id="email"
+                type="email"
+                placeholder="email@company.com"
+                novalidate
+              />
+              <button id="subscribe" class="form__submit" type="submit">
+                Subscribe to monthly newsletter
+              </button>
+            </form>
+          </div>
         </div>
       </div>
-    </body>
-  </main>
+
+      <!-- Success message start -->
+
+      <div id="success__container" class="success__container">
+        <img src="assets/images/icon-success.svg" alt="Success checkmark" />
+        <h1>Thanks for subscribing!</h1>
+        <p class="form__paragraph">
+          A confirmation email has been sent to
+          <span id="user-email">placeholder</span>. Please check your inbox and
+          confirm your subscription.
+        </p>
+        <button id="dismiss" class="dismiss__button">Dismiss message</button>
+        <!-- Success message end -->
+      </div>
+    </main>
+  </body>
 </html>

@@ -7,6 +7,7 @@
     --charcoal-grey: hsl(235, 18%, 26%);
     --grey: hsl(231, 7%, 60%);
     --white: hsl(0, 0%, 100%);
+    --light-salmon: hsl(5, 100%, 95%);
 
     /* Typography */
     --font-size-body: 16px;
@@ -15,4 +16,250 @@
     --font-family: 'Roboto', sans-serif;
     --font-weight-regular: 400;
     --font-weight-bold: 700;
+}
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 2. Remove default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+    text-align: left;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* *8 Remove lists styling  */
+ul,
+ol {
+    list-style-type: none;
+}
+
+
+/* 9. Create a root stacking context */
+#root,
+#__next {
+    isolation: isolate;
+}
+
+body {
+    min-height: 100svh;
+    font-family: var(--font-family);
+}
+
+main {
+    min-height: 100svh;
+    background: var(--charcoal-grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__container {
+    display: grid;
+    grid-template-areas: "b" "a";
+    max-width: 23rem;
+    overflow: hidden;
+    border-radius: 1rem;
+    background: white;
+}
+
+picture {
+    grid-area: b;
+}
+
+.left__container {
+    grid-area: a;
+}
+
+.text__container {
+    padding: 2.5rem 3rem 0 1.8rem;
+}
+
+h1 {
+    line-height: 1;
+    color: var(--dark-slate-grey);
+    font-weight: var(--font-weight-bold);
+    padding-bottom: 1.5rem;
+    font-size: 2.4rem;
+}
+
+.form__paragraph {
+    padding-bottom: 1.3rem;
+}
+
+.form__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding-bottom: 2rem;
+}
+
+.form__bullet {
+    display: flex;
+    gap: 1rem;
+}
+
+.form__icon {
+    align-self: flex-start;
+}
+
+label {
+    display: block;
+}
+
+.form__container {
+    padding: 0.5rem 1rem 2rem 1rem;
+}
+
+.form__label {
+    padding-bottom: 0.3rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 0.8rem;
+}
+
+.label {
+    font-weight: var(--font-weight-bold);
+}
+
+input {
+    width: 100%;
+    border-radius: 0.5rem;
+    padding: 1rem 0rem 1rem 1.5rem;
+    border: 1px solid var(--grey);
+}
+
+.active {
+    border-color: var(--tomato);
+    color: var(--tomato);
+    background-color: var(--light-salmon);
+}
+
+button {
+    margin-top: 1.5rem;
+    width: 100%;
+    border-radius: 0.5rem;
+    border: none;
+    color: white;
+    background-color: var(--dark-slate-grey);
+    padding: 1rem 0 0.8rem 0;
+
+}
+
+.error__message {
+    display: none;
+    color: var(--tomato);
+}
+
+@media (hover:hover) {
+    button:hover {
+        background-color: var(--tomato);
+    }
+}
+
+#success__container {
+    display: none;
+    background: white;
+    flex-direction: column;
+    height: 100%;
+    padding: 40% 1.8rem 3rem 1.8rem;
+}
+
+#success__container img {
+    max-width: 4rem;
+    padding-bottom: 3rem;
+}
+
+.dismiss__button {
+    margin-top: auto;
+}
+
+@media screen and (min-width: 56em) {
+
+
+    .main__container {
+        max-width: 58rem;
+        background: white;
+        padding: 1.5rem 1.5rem 1.5rem 2rem;
+        border-radius: 1rem;
+        display: grid;
+        grid-template-areas: "a b";
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+
+    .text__container {
+        padding-right: 2rem;
+    }
+
+    .text__container h1 {
+        font-size: 2.9rem;
+        padding-top: 2rem;
+    }
+
+    #success__container h1 {
+        font-size: 3.4rem;
+        padding-bottom: 2.5rem;
+    }
+
+    #success__container {
+        border-radius: 1rem;
+        height: 33rem;
+        padding: 3rem 4rem 3rem 4rem;
+        max-width: 31.625rem;
+    }
+
+    #success__container .active {
+        display: block;
+    }
+
+    #success__container img {
+        padding-bottom: 2.5rem;
+    }
+
+    .dismiss__button {
+        margin-top: auto;
+    }
 }
